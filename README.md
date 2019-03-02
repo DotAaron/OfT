@@ -1,6 +1,6 @@
 # OfT
 
-Merge two files in one quickly.
+Merge two files in one.
 
 OfT is creating a .exe file that contain your two files, when started the .exe file will execute the two files entered in OfT.
 
