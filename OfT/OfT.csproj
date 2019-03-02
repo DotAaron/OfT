@@ -32,6 +32,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>OfT.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,34 +52,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AppCode.cs" />
-    <Compile Include="Creating.cs">
+    <EmbeddedResource Include="App\AppCode.cs" />
+    <EmbeddedResource Include="App\AssemblyInfo.cs" />
+    <Compile Include="Forms\Creating.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Creating.Designer.cs">
+    <Compile Include="Forms\Creating.Designer.cs">
       <DependentUpon>Creating.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.cs">
+    <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
+    <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="IconSelector.cs">
+    <Compile Include="Forms\IconSelector.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IconSelector.Designer.cs">
+    <Compile Include="Forms\IconSelector.Designer.cs">
       <DependentUpon>IconSelector.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Creating.resx">
+    <EmbeddedResource Include="Forms\Creating.resx">
       <DependentUpon>Creating.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
+    <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IconSelector.resx">
+    <EmbeddedResource Include="Forms\IconSelector.resx">
       <DependentUpon>IconSelector.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -104,6 +111,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\seperator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Logo.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
